@@ -1,14 +1,15 @@
-export type menuItem = {
+export type MenuItem = {
   name: string;
   calories: number;
-  fat: number;
+  total_fat: number;
   saturated_fat: number;
   trans_fat: number;
   cholesterol: number;
   sodium: number;
-  carbohydrates: number;
-  fiber: number;
-  sugar: number;
+  total_carbohydrates: number;
+  dietary_fiber: number;
+  sugars: number;
+  protein: number;
 };
 
-export type menuCategory = { category: string; items: menuItem[] };
+export type MenuCategoryProps = { items: MenuItem[] };
