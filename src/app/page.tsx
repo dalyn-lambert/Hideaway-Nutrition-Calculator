@@ -2,12 +2,14 @@
 
 import React from 'react';
 import * as data from '../../public/data.json';
+import { menuItem } from './lib/types';
 export default function Home() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
-  const [item, setItem] = React.useState('Default');
+  const [item, setItem] = React.useState('');
   const { crusts, sauces } = data;
+
   return (
-    <main className='flex min-h-screen flex-col gap-6 items-center p-24 text-2xl'>
+    <main className='flex min-h-screen flex-col gap-6 items-center phone:text-base desktop:p-24 desktop:text-2xl'>
       <div>Hideaway Nutrition Calculator</div>
       <div>Current: {item}</div>
       <div className='flex flex-row gap-4'>
@@ -36,9 +38,10 @@ export default function Home() {
                     id={crust.name}
                     name='crust'
                     value={crust.name}
-                    onChange={() =>
-                      setMacros({ cal: crust.calories, protein: 100, fat: crust.fat, carb: crust.carbohydrates })
-                    }
+                    onChange={() => {
+                      setMacros({ cal: crust.calories, protein: 100, fat: crust.fat, carb: crust.carbohydrates });
+                      setItem(crust.name);
+                    }}
                   />
                 </td>
                 <td>{crust.name}</td>
