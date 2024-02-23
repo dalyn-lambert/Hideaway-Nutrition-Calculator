@@ -8,10 +8,10 @@ export default function Home() {
   const { crusts, sauces } = data;
 
   return (
-    <main className='flex min-h-screen flex-col gap-6 items-center phone:text-base desktop:text-2xl'>
+    <main className='flex min-h-screen flex-col gap-6 items-center text-xs p-4'>
       <div>Hideaway Nutrition Calculator</div>
       <div>Current: {item}</div>
-      <div className='flex flex-row gap-4'>
+      <div className='flex flex-row gap-2'>
         <span>{macros.cal} cal</span>
         <span>{macros.protein} protein</span>
         <span>{macros.fat} fat</span>
@@ -23,11 +23,11 @@ export default function Home() {
           <thead className='uppercase'>
             <tr>
               <th></th>
-              <th className='px-4'>Name</th>
-              <th className='px-4'>Cal</th>
-              <th className='px-4'>Protein</th>
-              <th className='px-4'>Fat</th>
-              <th className='px-4'>Carb</th>
+              <th className='px-2'>Name</th>
+              <th className='px-2'>Cal</th>
+              <th className='px-2'>Protein</th>
+              <th className='px-2'>Fat</th>
+              <th className='px-2'>Carb</th>
             </tr>
           </thead>
           <tbody>
@@ -50,11 +50,11 @@ export default function Home() {
                     }}
                   />
                 </td>
-                <td className='px-4'>{crust.name}</td>
-                <td className='px-4 text-center'>{crust.calories}</td>
-                <td className='px-4 text-center'>{crust.protein}</td>
-                <td className='px-4 text-center'>{crust.total_fat}</td>
-                <td className='px-4 text-center'>{crust.total_carbohydrates}</td>
+                <td className='px-2'>{crust.name}</td>
+                <td className='px-2 text-center'>{crust.calories}</td>
+                <td className='px-2 text-center'>{crust.protein}</td>
+                <td className='px-2 text-center'>{crust.total_fat}</td>
+                <td className='px-2 text-center'>{crust.total_carbohydrates}</td>
               </tr>
             ))}
           </tbody>
