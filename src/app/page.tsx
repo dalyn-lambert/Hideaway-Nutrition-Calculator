@@ -2,14 +2,13 @@
 
 import React from 'react';
 import * as data from '../../public/data.json';
-import { menuItem } from './lib/types';
 export default function Home() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
   const [item, setItem] = React.useState('');
   const { crusts, sauces } = data;
 
   return (
-    <main className='flex min-h-screen flex-col gap-6 items-center phone:text-base desktop:p-24 desktop:text-2xl'>
+    <main className='flex min-h-screen flex-col gap-6 items-center phone:text-base desktop:text-2xl'>
       <div>Hideaway Nutrition Calculator</div>
       <div>Current: {item}</div>
       <div className='flex flex-row gap-4'>
@@ -20,13 +19,15 @@ export default function Home() {
       </div>
       <div>
         <div className='text-3xl'>Crusts</div>
-        <table>
-          <thead>
+        <table className='table-auto '>
+          <thead className='uppercase'>
             <tr>
-              <th>Name</th>
-              <th>Cal</th>
-              <th>Fat</th>
-              <th>Carb</th>
+              <th></th>
+              <th className='px-4'>Name</th>
+              <th className='px-4'>Cal</th>
+              <th className='px-4'>Protein</th>
+              <th className='px-4'>Fat</th>
+              <th className='px-4'>Carb</th>
             </tr>
           </thead>
           <tbody>
@@ -39,15 +40,21 @@ export default function Home() {
                     name='crust'
                     value={crust.name}
                     onChange={() => {
-                      setMacros({ cal: crust.calories, protein: 100, fat: crust.fat, carb: crust.carbohydrates });
+                      setMacros({
+                        cal: crust.calories,
+                        protein: crust.protein,
+                        fat: crust.total_fat,
+                        carb: crust.total_carbohydrates,
+                      });
                       setItem(crust.name);
                     }}
                   />
                 </td>
-                <td>{crust.name}</td>
-                <td>{crust.calories}</td>
-                <td>{crust.fat}</td>
-                <td>{crust.carbohydrates}</td>
+                <td className='px-4'>{crust.name}</td>
+                <td className='px-4 text-center'>{crust.calories}</td>
+                <td className='px-4 text-center'>{crust.protein}</td>
+                <td className='px-4 text-center'>{crust.total_fat}</td>
+                <td className='px-4 text-center'>{crust.total_carbohydrates}</td>
               </tr>
             ))}
           </tbody>
