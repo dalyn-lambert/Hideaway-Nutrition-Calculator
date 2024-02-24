@@ -1,3 +1,8 @@
+export type Category = {
+  name: string;
+  options: MenuItem[];
+};
+
 export type MenuItem = {
   name: string;
   calories: number;
@@ -12,4 +17,4 @@ export type MenuItem = {
   protein: number;
 };
 
-export type MenuCategoryProps = { items: MenuItem[] };
+export type MenuCategoryProps = { category: string; items: MenuItem[] };

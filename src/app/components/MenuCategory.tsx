@@ -1,6 +1,6 @@
 import { MenuCategoryProps } from '../lib/types';
 
-function MenuCategory({ items }: MenuCategoryProps) {
+function MenuCategory({ category, items }: MenuCategoryProps) {
   return (
     <div>
       <table className='table-auto'>
@@ -21,7 +21,7 @@ function MenuCategory({ items }: MenuCategoryProps) {
                 <input
                   type='radio'
                   id={item.name}
-                  name='item'
+                  name={category}
                   value={item.name}
                   // onChange={() => {
                   //   setMacros({
