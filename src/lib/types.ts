@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react';
+
 export type Category = {
   name: string;
 };
@@ -28,4 +30,9 @@ export type MenuItem = {
   protein: number | null;
 };
 
-export type MenuCategoryProps = { category: string; items: MenuItem[] };
+export type MenuCategoryProps = {
+  category: string;
+  items: MenuItem[];
+  setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;
+  setItem: Dispatch<SetStateAction<string>>;
+};

@@ -1,6 +1,6 @@
 import { MenuCategoryProps } from '../lib/types';
 
-function MenuCategory({ category, items }: MenuCategoryProps) {
+function MenuCategory({ category, items, setItem, setMacros }: MenuCategoryProps) {
   return (
     <div>
       <table className='table-auto'>
@@ -23,15 +23,15 @@ function MenuCategory({ category, items }: MenuCategoryProps) {
                   id={item.name}
                   name={category}
                   value={item.name}
-                  // onChange={() => {
-                  //   setMacros({
-                  //     cal: item.calories,
-                  //     protein: item.protein,
-                  //     fat: item.total_fat,
-                  //     carb: item.total_carbohydrates,
-                  //   });
-                  //   setItem(item.name);
-                  // }}
+                  onChange={() => {
+                    setMacros({
+                      cal: item.calories || 0,
+                      protein: item.protein || 0,
+                      fat: item.total_fat || 0,
+                      carb: item.total_carbohydrates || 0,
+                    });
+                    setItem(item.name);
+                  }}
                 />
               </td>
               <td className='px-2'>{item.name}</td>
