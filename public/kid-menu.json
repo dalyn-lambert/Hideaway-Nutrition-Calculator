@@ -1,6 +1,7 @@
 {
-  "food": {
-    "chicken-bites": {
+  "food": [
+    {
+      "name": "Chicken Bites",
       "calories": 1550,
       "calories_from_fat": 850,
       "total_fat": 96,
@@ -17,7 +18,8 @@
       "added_sugars": 16,
       "protein": 77
     },
-    "corn-dog": {
+    {
+      "name": "Corn Dog",
       "calories": 510,
       "calories_from_fat": 250,
       "total_fat": 29,
@@ -34,7 +36,8 @@
       "added_sugars": 16,
       "protein": 9
     },
-    "kids-cheese-pizza": {
+    {
+      "name": "Kids Cheese Pizza",
       "calories": 560,
       "calories_from_fat": 220,
       "total_fat": 25,
@@ -51,7 +54,8 @@
       "added_sugars": 4,
       "protein": 20
     },
-    "kids-mac-n-cheese": {
+    {
+      "name": "Kids Mac 'N Cheese",
       "calories": 470,
       "calories_from_fat": 250,
       "total_fat": 28,
@@ -68,7 +72,8 @@
       "added_sugars": null,
       "protein": 22
     },
-    "kids-alfredo-pasta": {
+    {
+      "name": "Kids Alfredo Pasta",
       "calories": 540,
       "calories_from_fat": 310,
       "total_fat": 35,
@@ -85,7 +90,8 @@
       "added_sugars": null,
       "protein": 18
     },
-    "kids-meatball-pasta": {
+    {
+      "name": "Kids Meatball Pasta",
       "calories": 390,
       "calories_from_fat": 150,
       "total_fat": 17,
@@ -102,9 +108,10 @@
       "added_sugars": null,
       "protein": 18
     }
-  },
-  "drinks": {
-    "diet-dr-pepper": {
+  ],
+  "drinks": [
+    {
+      "name": "Diet Dr. Pepper",
       "calories": null,
       "calories_from_fat": null,
       "total_fat": null,
@@ -121,7 +128,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "diet-pepsi": {
+    {
+      "name": "Diet Pepsi",
       "calories": null,
       "calories_from_fat": null,
       "total_fat": null,
@@ -138,7 +146,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "dr-pepper": {
+    {
+      "name": "Dr. Pepper",
       "calories": 150,
       "calories_from_fat": null,
       "total_fat": null,
@@ -155,7 +164,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "iced-tea": {
+    {
+      "name": "Iced Tea",
       "calories": 0,
       "calories_from_fat": null,
       "total_fat": null,
@@ -172,7 +182,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "lemonade": {
+    {
+      "name": "Lemonade",
       "calories": 150,
       "calories_from_fat": null,
       "total_fat": null,
@@ -189,7 +200,8 @@
       "added_sugars": 41,
       "protein": null
     },
-    "mountain-dew": {
+    {
+      "name": "Mountain Dew",
       "calories": 170,
       "calories_from_fat": null,
       "total_fat": null,
@@ -206,7 +218,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "mugs-root-beer": {
+    {
+      "name": "Mugs Root Beer",
       "calories": 150,
       "calories_from_fat": null,
       "total_fat": null,
@@ -223,7 +236,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "pepsi": {
+    {
+      "name": "Pepsi",
       "calories": 150,
       "calories_from_fat": null,
       "total_fat": null,
@@ -240,7 +254,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "sierra-mist": {
+    {
+      "name": "Sierra Mist",
       "calories": 150,
       "calories_from_fat": null,
       "total_fat": null,
@@ -257,7 +272,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "stawberry-melon-ice-tea": {
+    {
+      "name": "Strawberry Melon Ice Tea",
       "calories": 70,
       "calories_from_fat": null,
       "total_fat": null,
@@ -274,7 +290,8 @@
       "added_sugars": null,
       "protein": null
     },
-    "sweet-iced-tea": {
+    {
+      "name": "Sweet Iced Tea",
       "calories": 70,
       "calories_from_fat": null,
       "total_fat": null,
@@ -291,7 +308,8 @@
       "added_sugars": 17,
       "protein": null
     },
-    "whole-milk": {
+    {
+      "name": "Whole Milk",
       "calories": 220,
       "calories_from_fat": 110,
       "total_fat": 12,
@@ -308,5 +326,5 @@
       "added_sugars": null,
       "protein": 12
     }
-  }
+  ]
 }

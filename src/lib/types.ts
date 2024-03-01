@@ -34,5 +34,6 @@ export type MenuCategoryProps = {
   category: string;
   items: MenuItem[];
   setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;
-  setItem: Dispatch<SetStateAction<string>>;
+  setSelected: Dispatch<SetStateAction<string[]>>;
+  selected: string[];
 };

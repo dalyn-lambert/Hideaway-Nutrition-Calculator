@@ -5,15 +5,15 @@ import React from 'react';
 
 import MenuCategory from '@/components/MenuCategory';
 import data from 'public/pastas.json';
-export default function Drinks() {
+export default function Pastas() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
-  const [item, setItem] = React.useState('');
+  const [selected, setSelected] = React.useState(['']);
   const pastas: MenuItem[] = data.pastas;
   return (
     <main className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Pastas</div>
       <div className='text-center'>
-        <div>Current: {item}</div>
+        <div>Current: {selected}</div>
         <div className='flex flex-row gap-2'>
           <span>{macros.cal} cal</span>
           <span>{macros.protein} protein</span>
@@ -21,7 +21,13 @@ export default function Drinks() {
           <span>{macros.carb} carb</span>
         </div>
       </div>
-      <MenuCategory category='drinks' items={pastas} setItem={setItem} setMacros={setMacros} />
+      <MenuCategory
+        category='drinks'
+        items={pastas}
+        selected={selected}
+        setSelected={setSelected}
+        setMacros={setMacros}
+      />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import { MenuCategoryProps } from '../lib/types';
 
-function MenuCategory({ category, items, setItem, setMacros }: MenuCategoryProps) {
+function MenuCategory({ category, items, selected, setSelected, setMacros }: MenuCategoryProps) {
   return (
     <div>
       <table className='table-auto'>
@@ -30,7 +30,7 @@ function MenuCategory({ category, items, setItem, setMacros }: MenuCategoryProps
                       fat: item.total_fat || 0,
                       carb: item.total_carbohydrates || 0,
                     });
-                    setItem(item.name);
+                    setSelected([...selected, item.name]);
                   }}
                 />
               </td>
@@ -46,4 +46,5 @@ function MenuCategory({ category, items, setItem, setMacros }: MenuCategoryProps
     </div>
   );
 }
+function handleSelection() {}
 export default MenuCategory;
