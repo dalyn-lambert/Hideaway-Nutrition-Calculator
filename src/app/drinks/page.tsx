@@ -3,6 +3,7 @@
 import { MenuItem } from '@/lib/types';
 import React from 'react';
 
+import MenuCategory from '@/components/MenuCategory';
 import data from 'public/drinks.json';
 export default function Drinks() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
@@ -18,11 +19,7 @@ export default function Drinks() {
         <span>{macros.fat} fat</span>
         <span>{macros.carb} carb</span>
       </div>
-      {drinks.map((drink) => (
-        <div key={drink.name}>
-          <span className='text-xl'>{drink.name}</span>
-        </div>
-      ))}
+      <MenuCategory category='drinks' items={drinks} />
     </main>
   );
 }

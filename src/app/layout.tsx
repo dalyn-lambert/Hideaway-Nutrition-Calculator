@@ -10,8 +10,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className='flex min-h-screen flex-col gap-6 items-center p-4'>
-        <Link href={'/'}>Hideaway Nutrition Calculator</Link>
+      <body className='flex min-h-screen flex-col gap-6 items-center p-4 pt-10'>
+        <Link href={'/'} className='text-2xl'>
+          Hideaway Nutrition Calculator
+        </Link>
         {children}
       </body>
     </html>

@@ -35,10 +35,10 @@ function MenuCategory({ category, items }: MenuCategoryProps) {
                 />
               </td>
               <td className='px-2'>{item.name}</td>
-              <td className='px-2 text-center'>{item.calories}</td>
-              <td className='px-2 text-center'>{item.protein}</td>
-              <td className='px-2 text-center'>{item.total_fat}</td>
-              <td className='px-2 text-center'>{item.total_carbohydrates}</td>
+              <td className='px-2 text-center'>{item.calories || '-'}</td>
+              <td className='px-2 text-center'>{item.protein || '-'}</td>
+              <td className='px-2 text-center'>{item.total_fat || '-'}</td>
+              <td className='px-2 text-center'>{item.total_carbohydrates || '-'}</td>
             </tr>
           ))}
         </tbody>
