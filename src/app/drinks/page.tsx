@@ -2,7 +2,8 @@
 
 import { MenuItem } from '@/lib/types';
 import React from 'react';
-import * as data from '/home/dalyn/._Files/projects/hideaway-nutrition-calculator/public/drinks.json';
+
+import data from 'public/drinks.json';
 export default function Drinks() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
   const [item, setItem] = React.useState('');
