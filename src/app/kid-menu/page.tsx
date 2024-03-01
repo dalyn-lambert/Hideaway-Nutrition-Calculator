@@ -28,8 +28,8 @@ export default function KidMenu() {
           <span>{drinkMacros.carb + foodMacros.carb} carb</span>
         </div>
       </div>
-      <MenuCategory category='drinks' items={kidsFood} setSelected={setSelectedDrink} setMacros={setDrinkMacros} />
-      <MenuCategory category='food' items={kidsDrinks} setSelected={setSelectedFood} setMacros={setFoodMacros} />
+      <MenuCategory category='food' items={kidsFood} setSelected={setSelectedDrink} setMacros={setDrinkMacros} />
+      <MenuCategory category='drinks' items={kidsDrinks} setSelected={setSelectedFood} setMacros={setFoodMacros} />
     </main>
   );
 }

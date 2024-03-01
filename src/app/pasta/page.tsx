@@ -21,13 +21,7 @@ export default function Pastas() {
           <span>{macros.carb} carb</span>
         </div>
       </div>
-      <MenuCategory
-        category='drinks'
-        items={pastas}
-        selected={selected}
-        setSelected={setSelected}
-        setMacros={setMacros}
-      />
+      <MenuCategory category='pasta' items={pastas} setSelected={setSelected} setMacros={setMacros} />
     </main>
   );
 }
