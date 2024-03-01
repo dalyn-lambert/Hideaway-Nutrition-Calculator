@@ -1,21 +1,3 @@
-// cauliflower: {
-//   small: {
-//     calories: 90,
-//     calories_from_fat: 30,
-//     total_fat: 3.5,
-//     saturated_fat: 0.5,
-//     trans_fat: null,
-//     polyunsaturated_fat: 1.5,
-//     monounsaturated_fat: 1.5,
-//     cholesterol: 10,
-//     sodium: 55,
-//     potassium: null,
-//     total_carbohydrates: 13,
-//     dietary_fiber: 1,
-//     sugars: null,
-//     added_sugars: null,
-//     protein: 1
-//   }
 export type Category = {
   name: string;
 };
@@ -29,16 +11,21 @@ export type CategoryData = {
 
 export type MenuItem = {
   name: string;
-  calories: number;
-  total_fat: number;
-  saturated_fat: number;
-  trans_fat: number;
-  cholesterol: number;
-  sodium: number;
-  total_carbohydrates: number;
-  dietary_fiber: number;
-  sugars: number;
-  protein: number;
+  calories: number | null;
+  calories_from_fat: number | null;
+  total_fat: number | null;
+  saturated_fat: number | null;
+  trans_fat: number | null;
+  polyunsaturated_fat: number | null;
+  monounsaturated_fat: number | null;
+  cholesterol: number | null;
+  sodium: number | null;
+  potassium: number | null;
+  total_carbohydrates: number | null;
+  dietary_fiber: number | null;
+  sugars: number | null;
+  added_sugars: number | null;
+  protein: number | null;
 };
 
 export type MenuCategoryProps = { category: string; items: MenuItem[] };
