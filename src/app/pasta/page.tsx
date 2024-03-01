@@ -7,7 +7,7 @@ import MenuCategory from '@/components/MenuCategory';
 import data from 'public/pastas.json';
 export default function Pastas() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
-  const [selected, setSelected] = React.useState(['']);
+  const [selected, setSelected] = React.useState('');
   const pastas: MenuItem[] = data.pastas;
   return (
     <main className='flex flex-col items-center gap-6'>

@@ -7,7 +7,7 @@ import MenuCategory from '@/components/MenuCategory';
 import data from 'public/drinks.json';
 export default function Drinks() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
-  const [selected, setSelected] = React.useState(['']);
+  const [selected, setSelected] = React.useState('');
   const drinks: MenuItem[] = data.drinks;
   return (
     <main className='flex flex-col items-center gap-6'>
@@ -24,7 +24,6 @@ export default function Drinks() {
       <MenuCategory
         category='drinks'
         items={drinks}
-        selected={selected}
         setSelected={setSelected}
         setMacros={setMacros}
       />
