@@ -30,6 +30,11 @@ export type MenuItem = {
   protein: number | null;
 };
 
+export type Sandwich = {
+  name: string;
+  options: MenuItem[];
+};
+
 export type MenuCategoryProps = {
   category: string;
   items: MenuItem[];
