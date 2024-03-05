@@ -3,7 +3,8 @@
 import { MenuItem } from '@/lib/types';
 import React from 'react';
 
-import MenuCategory from '@/components/MenuCategory';
+import MenuCheckbox from '@/components/MenuCheckbox';
+import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
 import data from 'public/sandwiches.json';
 export default function Sandwiches() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
@@ -16,7 +17,9 @@ export default function Sandwiches() {
     <main className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Sandwiches</div>
       <div className='text-center'>
-        <div>Current: {selected}</div>
+        <div>
+          Current: {selected} {selectedColeSlaw}
+        </div>
         <div className='flex flex-row gap-2'>
           <span>{macros.cal + macrosColeSlaw.cal} cal</span>
           <span>{macros.protein + macrosColeSlaw.protein} protein</span>
@@ -24,8 +27,13 @@ export default function Sandwiches() {
           <span>{macros.carb + macrosColeSlaw.carb} carb</span>
         </div>
       </div>
-      <MenuCategory category='sandwich' items={sandwichesNoChoice} setSelected={setSelected} setMacros={setMacros} />
-      <MenuCategory
+      <MenuRadioButtonGroup
+        category='sandwich'
+        items={sandwichesNoChoice}
+        setSelected={setSelected}
+        setMacros={setMacros}
+      />
+      <MenuCheckbox
         category='add-coleslaw'
         items={addColeSlaw}
         setSelected={setSelectedColeSlaw}

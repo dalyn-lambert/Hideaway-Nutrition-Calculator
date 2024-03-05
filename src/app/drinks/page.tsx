@@ -3,7 +3,7 @@
 import { MenuItem } from '@/lib/types';
 import React from 'react';
 
-import MenuCategory from '@/components/MenuCategory';
+import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
 import data from 'public/drinks.json';
 export default function Drinks() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
@@ -21,12 +21,7 @@ export default function Drinks() {
           <span>{macros.carb} carb</span>
         </div>
       </div>
-      <MenuCategory
-        category='drinks'
-        items={drinks}
-        setSelected={setSelected}
-        setMacros={setMacros}
-      />
+      <MenuRadioButtonGroup category='drinks' items={drinks} setSelected={setSelected} setMacros={setMacros} />
     </main>
   );
 }

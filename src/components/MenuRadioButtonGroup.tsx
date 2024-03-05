@@ -1,6 +1,6 @@
-import { MenuCategoryProps } from '../lib/types';
+import { MenuRadioButtonGroupProps } from '../lib/types';
 
-function MenuCategory({ category, items, setSelected, setMacros }: MenuCategoryProps) {
+function MenuRadioButtonGroup({ category, items, setSelected, setMacros }: MenuRadioButtonGroupProps) {
   return (
     <div>
       <table className='table-auto'>
@@ -46,5 +46,4 @@ function MenuCategory({ category, items, setSelected, setMacros }: MenuCategoryP
     </div>
   );
 }
-function handleSelection() {}
-export default MenuCategory;
+export default MenuRadioButtonGroup;

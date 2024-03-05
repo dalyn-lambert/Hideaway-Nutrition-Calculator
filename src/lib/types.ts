@@ -35,7 +35,14 @@ export type Sandwich = {
   options: MenuItem[];
 };
 
-export type MenuCategoryProps = {
+export type MenuRadioButtonGroupProps = {
+  category: string;
+  items: MenuItem[];
+  setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;
+  setSelected: Dispatch<SetStateAction<string>>;
+};
+
+export type MenuCheckboxProps = {
   category: string;
   items: MenuItem[];
   setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;

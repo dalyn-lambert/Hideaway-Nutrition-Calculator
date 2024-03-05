@@ -3,7 +3,7 @@
 import { MenuItem } from '@/lib/types';
 import React from 'react';
 
-import MenuCategory from '@/components/MenuCategory';
+import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
 import data from 'public/kid-menu.json';
 export default function KidMenu() {
   const [foodMacros, setFoodMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
@@ -28,8 +28,18 @@ export default function KidMenu() {
           <span>{drinkMacros.carb + foodMacros.carb} carb</span>
         </div>
       </div>
-      <MenuCategory category='food' items={kidsFood} setSelected={setSelectedDrink} setMacros={setDrinkMacros} />
-      <MenuCategory category='drinks' items={kidsDrinks} setSelected={setSelectedFood} setMacros={setFoodMacros} />
+      <MenuRadioButtonGroup
+        category='food'
+        items={kidsFood}
+        setSelected={setSelectedDrink}
+        setMacros={setDrinkMacros}
+      />
+      <MenuRadioButtonGroup
+        category='drinks'
+        items={kidsDrinks}
+        setSelected={setSelectedFood}
+        setMacros={setFoodMacros}
+      />
     </main>
   );
 }
