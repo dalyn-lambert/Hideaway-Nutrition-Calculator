@@ -17,8 +17,13 @@ export default function Sandwiches() {
     <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Sandwiches</div>
       <div className='text-center'>
-        <div>
-          Current: {selected} {selectedColeSlaw}
+        <div className='flex flex-col items-center text-center'>
+          <div className='flex flex-row gap-2'>
+            {selected || selectedColeSlaw ? '' : 'Please make a selection...'}
+            <span>{selected}</span>
+            {selected && selectedColeSlaw ? '&' : ''}
+            <span>{selectedColeSlaw}</span>
+          </div>
         </div>
         <div className='flex flex-row gap-2'>
           <span>{macros.cal + macrosColeSlaw.cal} cal</span>

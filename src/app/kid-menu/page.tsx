@@ -16,9 +16,11 @@ export default function KidMenu() {
   return (
     <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Kid Menu</div>
-      <div className='text-center'>
-        <div className='flex flex-col'>
+      <div className='flex flex-col items-center text-center'>
+        <div className='flex flex-row gap-2'>
+          {selectedFood || selectedDrink ? '' : 'Please make a selection...'}
           <span>{selectedFood}</span>
+          {selectedFood && selectedDrink ? '&' : ''}
           <span>{selectedDrink}</span>
         </div>
         <div className='flex flex-row gap-2'>

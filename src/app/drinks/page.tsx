@@ -12,8 +12,11 @@ export default function Drinks() {
   return (
     <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Drinks</div>
-      <div className='text-center'>
-        <div>Current: {selected}</div>
+      <div className='flex flex-col items-center text-center'>
+        <div className='flex flex-row gap-2'>
+          {selected ? '' : 'Please make a selection...'}
+          <span>{selected}</span>
+        </div>
         <div className='flex flex-row gap-2'>
           <span>{macros.cal} cal</span>
           <span>{macros.protein} protein</span>
