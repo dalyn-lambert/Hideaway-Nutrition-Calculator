@@ -4,8 +4,8 @@ import NavTile from './NavTile';
 const links: LinkData[] = [
   { label: 'STARTERS', route: '/starters' },
   { label: 'SALADS', route: '/salads' },
-  { label: 'BUILD YOUR OWN PIZZA', route: '/build-your-own-pizza' },
   { label: 'SPECIALTY PIZZAS', route: '/specialty-pizzas' },
+  { label: 'BUILD YOUR OWN PIZZA', route: '/' },
   { label: 'SANDWICHES', route: '/sandwiches' },
   { label: 'PASTA', route: '/pasta' },
   { label: 'DESSERTS', route: '/desserts' },
