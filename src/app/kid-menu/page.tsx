@@ -14,7 +14,7 @@ export default function KidMenu() {
   const kidsDrinks: MenuItem[] = data.drinks;
 
   return (
-    <main className='flex flex-col items-center gap-6'>
+    <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Kid Menu</div>
       <div className='text-center'>
         <div className='flex flex-col'>
@@ -40,6 +40,6 @@ export default function KidMenu() {
         setSelected={setSelectedFood}
         setMacros={setFoodMacros}
       />
-    </main>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className='flex flex-col gap-4 text-large'>
+    <div className='flex flex-col gap-4 text-large'>
       <Link href={'/starters'}>STARTERS</Link>
       <Link href={'/salads'}>SAlADS</Link>
       <Link href={'/build-your-own-pizza'}>BUILD YOUR OWN PIZZA</Link>
@@ -14,6 +14,6 @@ export default function Home() {
       <Link href={'/desserts'}>DESSERTS</Link>
       <Link href={'/drinks'}>DRINKS</Link>
       <Link href={'/kid-menu'}>KID MENU</Link>
-    </main>
+    </div>
   );
 }

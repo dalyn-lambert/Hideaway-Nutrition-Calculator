@@ -1,5 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
 
+export type LinkData = { label: string; route: string };
+
+export type NavTileProps = { link: LinkData };
+
 export type Category = {
   name: string;
 };

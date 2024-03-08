@@ -10,7 +10,7 @@ export default function Pastas() {
   const [selected, setSelected] = React.useState('');
   const pastas: MenuItem[] = data.pastas;
   return (
-    <main className='flex flex-col items-center gap-6'>
+    <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Pastas</div>
       <div className='text-center'>
         <div>Current: {selected}</div>
@@ -22,6 +22,6 @@ export default function Pastas() {
         </div>
       </div>
       <MenuRadioButtonGroup category='pasta' items={pastas} setSelected={setSelected} setMacros={setMacros} />
-    </main>
+    </div>
   );
 }

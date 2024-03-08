@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: { 'hideaway-red': '#ec1f2f' },
       screens: {
         phone: '640px',
         // => @media (min-width: 640px) { ... }

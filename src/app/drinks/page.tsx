@@ -10,7 +10,7 @@ export default function Drinks() {
   const [selected, setSelected] = React.useState('');
   const drinks: MenuItem[] = data.drinks;
   return (
-    <main className='flex flex-col items-center gap-6'>
+    <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Drinks</div>
       <div className='text-center'>
         <div>Current: {selected}</div>
@@ -22,6 +22,6 @@ export default function Drinks() {
         </div>
       </div>
       <MenuRadioButtonGroup category='drinks' items={drinks} setSelected={setSelected} setMacros={setMacros} />
-    </main>
+    </div>
   );
 }

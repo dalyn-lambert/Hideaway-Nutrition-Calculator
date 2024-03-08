@@ -14,7 +14,7 @@ export default function Sandwiches() {
   const sandwichesNoChoice: MenuItem[] = data['no-choices'];
   const addColeSlaw: MenuItem[] = data.extra;
   return (
-    <main className='flex flex-col items-center gap-6'>
+    <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Sandwiches</div>
       <div className='text-center'>
         <div>
@@ -39,6 +39,6 @@ export default function Sandwiches() {
         setSelected={setSelectedColeSlaw}
         setMacros={setMacrosColeSlaw}
       />
-    </main>
+    </div>
   );
 }
