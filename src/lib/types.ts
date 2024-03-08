@@ -52,3 +52,7 @@ export type MenuCheckboxProps = {
   setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;
   setSelected: Dispatch<SetStateAction<string>>;
 };
+
+export type CurrentSelectionProps = {
+  selected: string[];
+};

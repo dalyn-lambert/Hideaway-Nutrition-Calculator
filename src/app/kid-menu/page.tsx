@@ -3,6 +3,7 @@
 import { MenuItem } from '@/lib/types';
 import React from 'react';
 
+import CurrentSelection from '@/components/CurrentSelection';
 import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
 import data from 'public/kid-menu.json';
 export default function KidMenu() {
@@ -17,12 +18,7 @@ export default function KidMenu() {
     <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Kid Menu</div>
       <div className='flex flex-col items-center text-center'>
-        <div className='flex flex-row gap-2'>
-          {selectedFood || selectedDrink ? '' : 'Please make a selection...'}
-          <span>{selectedFood}</span>
-          {selectedFood && selectedDrink ? '&' : ''}
-          <span>{selectedDrink}</span>
-        </div>
+        <CurrentSelection selected={[selectedDrink, selectedFood]} />
         <div className='flex flex-row gap-2'>
           <span>{drinkMacros.cal + foodMacros.cal} cal</span>
           <span>{drinkMacros.protein + foodMacros.protein} protein</span>

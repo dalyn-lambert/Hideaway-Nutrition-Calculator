@@ -3,6 +3,7 @@
 import { MenuItem } from '@/lib/types';
 import React from 'react';
 
+import CurrentSelection from '@/components/CurrentSelection';
 import MenuCheckbox from '@/components/MenuCheckbox';
 import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
 import data from 'public/sandwiches.json';
@@ -17,12 +18,7 @@ export default function Sandwiches() {
     <div className='flex flex-col items-center gap-6'>
       <div className='text-lg'>Sandwiches</div>
       <div className='flex flex-col items-center text-center'>
-        <div className='flex flex-row gap-2'>
-          {selected || selectedColeSlaw ? '' : 'Please make a selection...'}
-          <span>{selected}</span>
-          {selected && selectedColeSlaw ? '&' : ''}
-          <span>{selectedColeSlaw}</span>
-        </div>
+        <CurrentSelection selected={[selected, selectedColeSlaw]} />
         <div className='flex flex-row gap-2'>
           <span>{macros.cal + macrosColeSlaw.cal} cal</span>
           <span>{macros.protein + macrosColeSlaw.protein} protein</span>
