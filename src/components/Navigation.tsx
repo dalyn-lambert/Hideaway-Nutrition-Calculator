@@ -15,7 +15,7 @@ const links: LinkData[] = [
 
 const Navigation = async () => {
   return (
-    <div className='flex flex-row gap-1'>
+    <div className='flex flex-row flex-wrap gap-1'>
       {links.map((link) => (
         <NavTile key={link.label} link={link} />
       ))}
