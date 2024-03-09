@@ -1,3 +1,5 @@
+import PageTitle from '@/components/PageTitle';
+
 export default function Starters() {
-  return <div>Starters</div>;
+  return <PageTitle title='Starters' />;
 }

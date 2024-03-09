@@ -1,3 +1,5 @@
+import PageTitle from '@/components/PageTitle';
+
 export default function Dessert() {
-  return <div>Dessert</div>;
+  return <PageTitle title='Desserts' />;
 }

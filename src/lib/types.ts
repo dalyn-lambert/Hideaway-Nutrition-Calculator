@@ -56,3 +56,7 @@ export type MenuCheckboxProps = {
 export type CurrentSelectionProps = {
   selected: string[];
 };
+
+export type PageTitleProps = {
+  title: string;
+};

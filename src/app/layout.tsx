@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           HIDEAWAY PIZZA NUTRITION CALCULATOR
         </Link>
         <Navigation />
-        {children}
+        <div className='flex flex-col items-center gap-6'>{children}</div>
       </body>
     </html>
   );

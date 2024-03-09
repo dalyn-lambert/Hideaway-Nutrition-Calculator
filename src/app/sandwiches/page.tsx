@@ -6,6 +6,7 @@ import React from 'react';
 import CurrentSelection from '@/components/CurrentSelection';
 import MenuCheckbox from '@/components/MenuCheckbox';
 import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
+import PageTitle from '@/components/PageTitle';
 import data from 'public/sandwiches.json';
 export default function Sandwiches() {
   const [macros, setMacros] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
@@ -15,8 +16,8 @@ export default function Sandwiches() {
   const sandwichesNoChoice: MenuItem[] = data['no-choices'];
   const addColeSlaw: MenuItem[] = data.extra;
   return (
-    <div className='flex flex-col items-center gap-6'>
-      <div className='text-lg'>Sandwiches</div>
+    <>
+      <PageTitle title='Sandwiches' />
       <div className='flex flex-col items-center text-center'>
         <CurrentSelection selected={[selected, selectedColeSlaw]} />
         <div className='flex flex-row gap-2'>
@@ -38,6 +39,6 @@ export default function Sandwiches() {
         setSelected={setSelectedColeSlaw}
         setMacros={setMacrosColeSlaw}
       />
-    </div>
+    </>
   );
 }

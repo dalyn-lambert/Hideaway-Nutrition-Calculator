@@ -1,3 +1,5 @@
+import PageTitle from '@/components/PageTitle';
+
 export default function SpecialtyPizza() {
-  return <div>Specialty Pizzas</div>;
+  return <PageTitle title='Specialty Pizzas' />;
 }

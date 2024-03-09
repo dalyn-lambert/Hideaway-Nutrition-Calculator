@@ -22,12 +22,3 @@ const CurrentSelection = ({ selected }: CurrentSelectionProps) => {
 };
 
 export default CurrentSelection;
-
-{
-  /* <div className='flex flex-row gap-2'>
-{selectedFood || selectedDrink ? '' : 'Please make a selection...'}
-<span>{selectedFood}</span>
-{selectedFood && selectedDrink ? '&' : ''}
-<span>{selectedDrink}</span>
-</div> */
-}
