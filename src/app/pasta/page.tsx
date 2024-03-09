@@ -14,15 +14,7 @@ export default function Pastas() {
   return (
     <>
       <PageTitle title='Pastas' />
-      <div className='flex flex-col items-center text-center'>
-        <CurrentSelection selected={[selected]} />
-        <div className='flex flex-row gap-2'>
-          <span>{macros.cal} cal</span>
-          <span>{macros.protein} protein</span>
-          <span>{macros.fat} fat</span>
-          <span>{macros.carb} carb</span>
-        </div>
-      </div>
+      <CurrentSelection selected={[selected]} macros={[macros]} />
       <MenuRadioButtonGroup category='pasta' items={pastas} setSelected={setSelected} setMacros={setMacros} />
     </>
   );

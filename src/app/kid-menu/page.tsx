@@ -18,15 +18,7 @@ export default function KidMenu() {
   return (
     <>
       <PageTitle title='Kid Menu' />
-      <div className='flex flex-col items-center text-center'>
-        <CurrentSelection selected={[selectedDrink, selectedFood]} />
-        <div className='flex flex-row gap-2'>
-          <span>{drinkMacros.cal + foodMacros.cal} cal</span>
-          <span>{drinkMacros.protein + foodMacros.protein} protein</span>
-          <span>{drinkMacros.fat + foodMacros.fat} fat</span>
-          <span>{drinkMacros.carb + foodMacros.carb} carb</span>
-        </div>
-      </div>
+      <CurrentSelection selected={[selectedDrink, selectedFood]} macros={[foodMacros, drinkMacros]} />
       <MenuRadioButtonGroup
         category='food'
         items={kidsFood}

@@ -7,7 +7,6 @@ function MenuCheckbox({ category, items, setSelected, setMacros }: MenuCheckboxP
     const checked = e.target.checked;
     const value = e.target.value;
     const itemMacros = items.find((item) => item.name === value);
-    console.log(itemMacros);
     if (!checked) {
       setSelected('');
       setMacros({ cal: 0, protein: 0, fat: 0, carb: 0 });

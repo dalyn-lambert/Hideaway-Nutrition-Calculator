@@ -39,22 +39,25 @@ export type Sandwich = {
   options: MenuItem[];
 };
 
+export type Macros = { cal: number; protein: number; fat: number; carb: number };
+
 export type MenuRadioButtonGroupProps = {
   category: string;
   items: MenuItem[];
-  setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;
+  setMacros: Dispatch<SetStateAction<Macros>>;
   setSelected: Dispatch<SetStateAction<string>>;
 };
 
 export type MenuCheckboxProps = {
   category: string;
   items: MenuItem[];
-  setMacros: Dispatch<SetStateAction<{ cal: number; protein: number; fat: number; carb: number }>>;
+  setMacros: Dispatch<SetStateAction<Macros>>;
   setSelected: Dispatch<SetStateAction<string>>;
 };
 
 export type CurrentSelectionProps = {
   selected: string[];
+  macros: Macros[];
 };
 
 export type PageTitleProps = {

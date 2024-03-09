@@ -18,15 +18,7 @@ export default function Sandwiches() {
   return (
     <>
       <PageTitle title='Sandwiches' />
-      <div className='flex flex-col items-center text-center'>
-        <CurrentSelection selected={[selected, selectedColeSlaw]} />
-        <div className='flex flex-row gap-2'>
-          <span>{macros.cal + macrosColeSlaw.cal} cal</span>
-          <span>{macros.protein + macrosColeSlaw.protein} protein</span>
-          <span>{macros.fat + macrosColeSlaw.fat} fat</span>
-          <span>{macros.carb + macrosColeSlaw.carb} carb</span>
-        </div>
-      </div>
+      <CurrentSelection selected={[selected, selectedColeSlaw]} macros={[macros, macrosColeSlaw]} />
       <MenuRadioButtonGroup
         category='sandwich'
         items={sandwichesNoChoice}
