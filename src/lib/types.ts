@@ -15,6 +15,12 @@ export type CategoryData = {
   options: Sizes;
 };
 
+export type SandwichWithBreadOption = {
+  name: string;
+  wheat: MenuItem;
+  white: MenuItem;
+};
+
 export type MenuItem = {
   name: string;
   calories: number | null;
@@ -34,16 +40,18 @@ export type MenuItem = {
   protein: number | null;
 };
 
-export type Sandwich = {
-  name: string;
-  options: MenuItem[];
-};
-
 export type Macros = { cal: number; protein: number; fat: number; carb: number };
 
 export type MenuRadioButtonGroupProps = {
   category: string;
   items: MenuItem[];
+  setMacros: Dispatch<SetStateAction<Macros>>;
+  setSelected: Dispatch<SetStateAction<string>>;
+};
+
+export type MenuWithChoiceProps = {
+  category: string;
+  items: SandwichWithBreadOption[];
   setMacros: Dispatch<SetStateAction<Macros>>;
   setSelected: Dispatch<SetStateAction<string>>;
 };

@@ -1,11 +1,12 @@
 'use client';
 
-import { MenuItem } from '@/lib/types';
+import { MenuItem, SandwichWithBreadOption } from '@/lib/types';
 import React from 'react';
 
 import CurrentSelection from '@/components/CurrentSelection';
 import MenuCheckbox from '@/components/MenuCheckbox';
 import MenuRadioButtonGroup from '@/components/MenuRadioButtonGroup';
+import MenuWithChoice from '@/components/MenuWithChoice';
 import PageTitle from '@/components/PageTitle';
 import data from 'public/sandwiches.json';
 export default function Sandwiches() {
@@ -14,6 +15,7 @@ export default function Sandwiches() {
   const [selected, setSelected] = React.useState('');
   const [selectedColeSlaw, setSelectedColeSlaw] = React.useState('');
   const sandwichesNoChoice: MenuItem[] = data['no-choices'];
+  const sandwichesWithChoice: SandwichWithBreadOption[] = data['choices'];
   const addColeSlaw: MenuItem[] = data.extra;
   return (
     <>
@@ -24,6 +26,12 @@ export default function Sandwiches() {
         items={sandwichesNoChoice}
         setSelected={setSelected}
         setMacros={setMacros}
+      />
+      <MenuWithChoice
+        category='sandwich'
+        items={sandwichesWithChoice}
+        setSelected={setSelectedColeSlaw}
+        setMacros={setMacrosColeSlaw}
       />
       <MenuCheckbox
         category='add-coleslaw'
