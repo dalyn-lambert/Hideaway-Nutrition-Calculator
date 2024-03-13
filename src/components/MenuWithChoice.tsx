@@ -6,12 +6,13 @@ function MenuWithChoice({ category, items, setSelected, setMacros }: MenuWithCho
   return (
     <div className='flex flex-col items-center'>
       <span>Select your desired bread:</span>
+
       <div className='flex flex-row gap-4 justify-center'>
         <input
           type='radio'
-          id={'white'}
-          name={'bread'}
-          value={'white'}
+          id='white'
+          name='bread'
+          value='white'
           onChange={() => {
             setBread('white');
           }}
@@ -19,15 +20,16 @@ function MenuWithChoice({ category, items, setSelected, setMacros }: MenuWithCho
         <label htmlFor='white'>White</label>
         <input
           type='radio'
-          id={'wheat'}
-          name={'bread'}
-          value={'wheat'}
+          id='wheat'
+          name='bread'
+          value='wheat'
           onChange={() => {
             setBread('wheat');
           }}
         />
         <label htmlFor='wheat'>Wheat</label>
       </div>
+
       <table className='table-auto'>
         <thead className='uppercase'>
           <tr>

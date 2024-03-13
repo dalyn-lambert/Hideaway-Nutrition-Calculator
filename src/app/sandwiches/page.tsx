@@ -30,8 +30,8 @@ export default function Sandwiches() {
       <MenuWithChoice
         category='sandwich'
         items={sandwichesWithChoice}
-        setSelected={setSelectedColeSlaw}
-        setMacros={setMacrosColeSlaw}
+        setSelected={setSelected}
+        setMacros={setMacros}
       />
       <MenuCheckbox
         category='add-coleslaw'
