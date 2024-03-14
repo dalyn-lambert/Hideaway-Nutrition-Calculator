@@ -56,13 +56,13 @@ function SandwichTable({ category, items, setSelected, setMacros }: SandwichTabl
             setBread('white');
             setMacros({
               // @ts-ignore
-              cal: current[bread].calories || 0,
+              cal: current.white.calories || 0,
               // @ts-ignore
-              protein: current[bread].protein || 0,
+              protein: current.white.protein || 0,
               // @ts-ignore
-              fat: current[bread].total_fat || 0,
+              fat: current.white.total_fat || 0,
               // @ts-ignore
-              carb: current[bread].total_carbohydrates || 0,
+              carb: current.white.total_carbohydrates || 0,
             });
           }}
         />
@@ -76,13 +76,13 @@ function SandwichTable({ category, items, setSelected, setMacros }: SandwichTabl
             setBread('wheat');
             setMacros({
               // @ts-ignore
-              cal: current[bread].calories || 0,
+              cal: current.wheat.calories || 0,
               // @ts-ignore
-              protein: current[bread].protein || 0,
+              protein: current.wheat.protein || 0,
               // @ts-ignore
-              fat: current[bread].total_fat || 0,
+              fat: current.wheat.total_fat || 0,
               // @ts-ignore
-              carb: current[bread].total_carbohydrates || 0,
+              carb: current.wheat.total_carbohydrates || 0,
             });
           }}
         />

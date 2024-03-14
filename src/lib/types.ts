@@ -8,17 +8,17 @@ export type Category = {
   name: string;
 };
 
-export type Sizes = { small: MenuItem[]; medium: MenuItem[]; large: MenuItem[] };
-
-export type CategoryData = {
-  name: string;
-  options: Sizes;
-};
-
 export type SandwichWithBreadOption = {
   name: string;
   wheat: MenuItem;
   white: MenuItem;
+};
+
+export type PizzaWithSizeOptions = {
+  name: string;
+  small: MenuItem;
+  medium: MenuItem;
+  large: MenuItem;
 };
 
 export type MenuItem = {
@@ -42,11 +42,27 @@ export type MenuItem = {
 
 export type Macros = { cal: number; protein: number; fat: number; carb: number };
 
+export type PizzaSizeRadioButtonsProps = {
+  size: string;
+  setSize: Dispatch<SetStateAction<string>>;
+  setMacros: Dispatch<SetStateAction<Macros>>;
+  crust: PizzaWithSizeOptions;
+};
+
 export type MenuRadioButtonGroupProps = {
   category: string;
   items: MenuItem[];
   setMacros: Dispatch<SetStateAction<Macros>>;
   setSelected: Dispatch<SetStateAction<string>>;
+};
+
+export type BYOPizzaTableProps = {
+  category: string;
+  items: PizzaWithSizeOptions[];
+  size: string;
+  setMacros: Dispatch<SetStateAction<Macros>>;
+  setSelected: Dispatch<SetStateAction<string>>;
+  setCrust: React.Dispatch<React.SetStateAction<PizzaWithSizeOptions>>;
 };
 
 export type SandwichTableProps = {
