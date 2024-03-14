@@ -49,7 +49,7 @@ export type MenuRadioButtonGroupProps = {
   setSelected: Dispatch<SetStateAction<string>>;
 };
 
-export type MenuWithChoiceProps = {
+export type SandwichTableProps = {
   category: string;
   items: SandwichWithBreadOption[];
   setMacros: Dispatch<SetStateAction<Macros>>;
