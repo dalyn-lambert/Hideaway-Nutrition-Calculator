@@ -3,6 +3,7 @@ import { BYOPizzaTableProps } from '../lib/types';
 function BYOPizzaTable({ category, items, size, setSelected, setMacros, setCrust }: BYOPizzaTableProps) {
   return (
     <div>
+      <div>{category}</div>
       <table className='table-auto'>
         <thead className='uppercase'>
           <tr>
@@ -36,7 +37,7 @@ function BYOPizzaTable({ category, items, size, setSelected, setMacros, setCrust
                       carb: item[size].total_carbohydrates || 0,
                     });
                     setSelected(item.name);
-                    setCrust(item)
+                    setCrust(item);
                   }}
                 />
               </td>
