@@ -9,7 +9,7 @@ import data from 'public/BYOPizza.json';
 
 import React from 'react';
 export default function BYOPizza() {
-  const emptyCrust: PizzaWithSizeOptions = {
+  const emptyPizza: PizzaWithSizeOptions = {
     name: '',
     small: {
       name: 'small',
@@ -67,16 +67,25 @@ export default function BYOPizza() {
     },
   };
   const [size, setSize] = React.useState('small');
-  const [macrosCrust, setMacrosCrust] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
-  const [crust, setCrust] = React.useState(emptyCrust);
-  const [crustName, setCrustName] = React.useState('');
+
+  // CRUST
   const crusts: PizzaWithSizeOptions[] = data.crust;
+  const [macrosCrust, setMacrosCrust] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
+  const [crust, setCrust] = React.useState(emptyPizza);
+  const [crustName, setCrustName] = React.useState('');
+
+  // SAUCE
+  const sauces: PizzaWithSizeOptions[] = data.sauce;
+  const [macrosSauce, setMacrosSauce] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
+  const [sauce, setSauce] = React.useState(emptyPizza);
+  const [sauceName, setSauceName] = React.useState('');
+
   return (
     <>
       <PageTitle title='Build Your Own Pizza' />
-      <CurrentSelection selected={[crustName]} macros={[macrosCrust]} />
+      <CurrentSelection selected={[crustName, sauceName]} macros={[macrosCrust, macrosSauce]} />
       {`Viewing info for a ${size} pizza`}
-      <PizzaSizeRadioButtons size={size} setSize={setSize} crust={crust} setMacros={setMacrosCrust} />
+      <PizzaSizeRadioButtons size={size} setSize={setSize} crust={crust} sauce={sauce} setMacros={setMacrosCrust} />
       <BYOPizzaTable
         category='crust'
         items={crusts}
@@ -84,6 +93,14 @@ export default function BYOPizza() {
         setSelected={setCrustName}
         setMacros={setMacrosCrust}
         setCrust={setCrust}
+      />
+      <BYOPizzaTable
+        category='sauce'
+        items={sauces}
+        size={size}
+        setSelected={setSauceName}
+        setMacros={setMacrosSauce}
+        setCrust={setSauce}
       />
     </>
   );

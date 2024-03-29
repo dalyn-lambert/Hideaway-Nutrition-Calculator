@@ -47,6 +47,7 @@ export type PizzaSizeRadioButtonsProps = {
   setSize: Dispatch<SetStateAction<string>>;
   setMacros: Dispatch<SetStateAction<Macros>>;
   crust: PizzaWithSizeOptions;
+  sauce: PizzaWithSizeOptions;
 };
 
 export type MenuRadioButtonGroupProps = {

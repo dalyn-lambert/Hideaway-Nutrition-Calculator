@@ -3,7 +3,7 @@ import { BYOPizzaTableProps } from '../lib/types';
 function BYOPizzaTable({ category, items, size, setSelected, setMacros, setCrust }: BYOPizzaTableProps) {
   return (
     <div>
-      <div>{category}</div>
+      <div>{category.toLocaleUpperCase()}</div>
       <table className='table-auto'>
         <thead className='uppercase'>
           <tr>
