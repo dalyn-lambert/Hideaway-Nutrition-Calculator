@@ -36,7 +36,7 @@ function BYOPizzaTable({ category, items, size, setSelected, setMacros, setCrust
 
                       carb: item[size].total_carbohydrates || 0,
                     });
-                    setSelected(item.name);
+                    setSelected(`${item.name} ${category}`);
                     setCrust(item);
                   }}
                 />

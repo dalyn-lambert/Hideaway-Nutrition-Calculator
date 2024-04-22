@@ -45,7 +45,8 @@ export type Macros = { cal: number; protein: number; fat: number; carb: number }
 export type PizzaSizeRadioButtonsProps = {
   size: string;
   setSize: Dispatch<SetStateAction<string>>;
-  setMacros: Dispatch<SetStateAction<Macros>>;
+  setMacrosCrust: Dispatch<SetStateAction<Macros>>;
+  setMacrosSauce: Dispatch<SetStateAction<Macros>>;
   crust: PizzaWithSizeOptions;
   sauce: PizzaWithSizeOptions;
 };

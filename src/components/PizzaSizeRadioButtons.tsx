@@ -1,9 +1,7 @@
 'use client';
 import { PizzaSizeRadioButtonsProps } from '@/lib/types';
 
-function PizzaSizeRadioButtons({ crust, sauce, setSize, setMacros }: PizzaSizeRadioButtonsProps) {
-  console.log(crust);
-  console.log(sauce);
+function PizzaSizeRadioButtons({ crust, sauce, setSize, setMacrosCrust, setMacrosSauce }: PizzaSizeRadioButtonsProps) {
   return (
     <div className='flex flex-row gap-4 justify-center'>
       <input
@@ -13,15 +11,25 @@ function PizzaSizeRadioButtons({ crust, sauce, setSize, setMacros }: PizzaSizeRa
         value='small'
         onChange={() => {
           setSize('small');
-          setMacros({
+          setMacrosCrust({
             // @ts-ignore
-            cal: crust.small.calories + sauce.small.calories || 0,
+            cal: crust.small.calories || 0,
             // @ts-ignore
-            protein: crust.small.protein + sauce.small.protein || 0,
+            protein: crust.small.protein || 0,
             // @ts-ignore
-            fat: crust.small.total_fat + sauce.small.total_fat || 0,
+            fat: crust.small.total_fat || 0,
             // @ts-ignore
-            carb: crust.small.total_carbohydrates + sauce.small.total_carbohydrates || 0,
+            carb: crust.small.total_carbohydrates || 0,
+          });
+          setMacrosSauce({
+            // @ts-ignore
+            cal: sauce.small.calories || 0,
+            // @ts-ignore
+            protein: sauce.small.protein || 0,
+            // @ts-ignore
+            fat: sauce.small.total_fat || 0,
+            // @ts-ignore
+            carb: sauce.small.total_carbohydrates || 0,
           });
         }}
       />
@@ -33,15 +41,25 @@ function PizzaSizeRadioButtons({ crust, sauce, setSize, setMacros }: PizzaSizeRa
         value='medium'
         onChange={() => {
           setSize('medium');
-          setMacros({
+          setMacrosCrust({
             // @ts-ignore
-            cal: crust.medium.calories + sauce.medium.calories || 0,
+            cal: crust.medium.calories || 0,
             // @ts-ignore
-            protein: crust.medium.protein + sauce.medium.protein || 0,
+            protein: crust.medium.protein || 0,
             // @ts-ignore
-            fat: crust.medium.total_fat + sauce.medium.total_fat || 0,
+            fat: crust.medium.total_fat || 0,
             // @ts-ignore
-            carb: crust.medium.total_carbohydrates + sauce.medium.total_carbohydrates || 0,
+            carb: crust.medium.total_carbohydrates || 0,
+          });
+          setMacrosSauce({
+            // @ts-ignore
+            cal: sauce.medium.calories || 0,
+            // @ts-ignore
+            protein: sauce.medium.protein || 0,
+            // @ts-ignore
+            fat: sauce.medium.total_fat || 0,
+            // @ts-ignore
+            carb: sauce.medium.total_carbohydrates || 0,
           });
         }}
       />
@@ -53,15 +71,25 @@ function PizzaSizeRadioButtons({ crust, sauce, setSize, setMacros }: PizzaSizeRa
         value='large'
         onChange={() => {
           setSize('large');
-          setMacros({
+          setMacrosCrust({
             // @ts-ignore
-            cal: crust.large.calories + sauce.large.calories || 0,
+            cal: crust.large.calories || 0,
             // @ts-ignore
-            protein: crust.large.protein + sauce.large.protein || 0,
+            protein: crust.large.protein || 0,
             // @ts-ignore
-            fat: crust.large.total_fat + sauce.large.total_fat || 0,
+            fat: crust.large.total_fat || 0,
             // @ts-ignore
-            carb: crust.large.total_carbohydrates + sauce.large.total_carbohydrates || 0,
+            carb: crust.large.total_carbohydrates || 0,
+          });
+          setMacrosSauce({
+            // @ts-ignore
+            cal: sauce.large.calories || 0,
+            // @ts-ignore
+            protein: sauce.large.protein || 0,
+            // @ts-ignore
+            fat: sauce.large.total_fat || 0,
+            // @ts-ignore
+            carb: sauce.large.total_carbohydrates || 0,
           });
         }}
       />

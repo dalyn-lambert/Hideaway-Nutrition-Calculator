@@ -85,9 +85,16 @@ export default function BYOPizza() {
       <PageTitle title='Build Your Own Pizza' />
       <CurrentSelection selected={[crustName, sauceName]} macros={[macrosCrust, macrosSauce]} />
       {`Viewing info for a ${size} pizza`}
-      <PizzaSizeRadioButtons size={size} setSize={setSize} crust={crust} sauce={sauce} setMacros={setMacrosCrust} />
+      <PizzaSizeRadioButtons
+        size={size}
+        setSize={setSize}
+        crust={crust}
+        sauce={sauce}
+        setMacrosCrust={setMacrosCrust}
+        setMacrosSauce={setMacrosSauce}
+      />
       <BYOPizzaTable
-        category='crust'
+        category='Crust'
         items={crusts}
         size={size}
         setSelected={setCrustName}
@@ -95,7 +102,7 @@ export default function BYOPizza() {
         setCrust={setCrust}
       />
       <BYOPizzaTable
-        category='sauce'
+        category='Sauce'
         items={sauces}
         size={size}
         setSelected={setSauceName}

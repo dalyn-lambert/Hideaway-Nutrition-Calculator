@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation';
 import type { Metadata } from 'next';
 import { Overpass } from 'next/font/google';
 import Link from 'next/link';
+import React from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
