@@ -1,6 +1,7 @@
 'use client';
 
 import BYOPizzaTable from '@/components/BYOPizzaTable';
+import BYOPizzaToppings from '@/components/BYOPizzaToppings';
 import CurrentSelection from '@/components/CurrentSelection';
 import PageTitle from '@/components/PageTitle';
 import PizzaSizeRadioButtons from '@/components/PizzaSizeRadioButtons';
@@ -80,11 +81,17 @@ export default function BYOPizza() {
   const [sauce, setSauce] = React.useState(emptyPizza);
   const [sauceName, setSauceName] = React.useState('');
 
+  // TOPPINGS
+  const allToppings = data.toppings;
+  const [macrosToppings, setMacrosToppings] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
+  const [toppings, setToppings] = React.useState(emptyPizza);
+  const [toppingsName, setToppingsName] = React.useState('');
+
   return (
     <>
       <PageTitle title='Build Your Own Pizza' />
       <CurrentSelection selected={[crustName, sauceName]} macros={[macrosCrust, macrosSauce]} />
-      {`Viewing info for a ${size} pizza`}
+      {`Viewing info for one ${size} slice of pizza`}
       <PizzaSizeRadioButtons
         size={size}
         setSize={setSize}
@@ -109,6 +116,16 @@ export default function BYOPizza() {
         setMacros={setMacrosSauce}
         setCrust={setSauce}
       />
+      {allToppings.map((toppings) => (
+        <BYOPizzaToppings
+          key={toppings.category}
+          category={toppings.category}
+          items={toppings.options}
+          size={size}
+          setSelected={setToppingsName}
+          setMacros={setMacrosToppings}
+        />
+      ))}
     </>
   );
 }

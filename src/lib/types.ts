@@ -21,6 +21,11 @@ export type PizzaWithSizeOptions = {
   large: MenuItem;
 };
 
+export type ToppingsForPizza = {
+  category: string;
+  options: PizzaWithSizeOptions[];
+};
+
 export type MenuItem = {
   name: string;
   calories: number | null;
@@ -65,6 +70,15 @@ export type BYOPizzaTableProps = {
   setMacros: Dispatch<SetStateAction<Macros>>;
   setSelected: Dispatch<SetStateAction<string>>;
   setCrust: React.Dispatch<React.SetStateAction<PizzaWithSizeOptions>>;
+};
+
+export type BYOPizzaToppingsProps = {
+  key: string;
+  category: string;
+  items: PizzaWithSizeOptions[];
+  size: string;
+  setMacros: Dispatch<SetStateAction<Macros>>;
+  setSelected: Dispatch<SetStateAction<string>>;
 };
 
 export type SandwichTableProps = {

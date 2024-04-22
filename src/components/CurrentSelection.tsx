@@ -11,8 +11,6 @@ const CurrentSelection = ({ selected, macros }: CurrentSelectionProps) => {
   const totalFat = _.sumBy(macros, 'fat');
   const totalCarb = _.sumBy(macros, 'carb');
 
-  console.log(selected);
-
   return (
     <div className='flex flex-col items-center text-center'>
       <div className='flex flex-row gap-2'>

@@ -518,7 +518,8 @@
   ],
   "toppings": [
     {
-      "Cheese Toppings": [
+      "category": "Cheese Toppings",
+      "options": [
         {
           "name": "Blue Cheese",
           "small": {
@@ -978,7 +979,8 @@
       ]
     },
     {
-      "Meat Toppings": [
+      "category": "Meat Toppings",
+      "options": [
         {
           "name": "Anchovies",
           "small": {
@@ -1780,7 +1782,8 @@
       ]
     },
     {
-      "Veggie Toppings": [
+      "category": "Veggie Toppings",
+      "options": [
         {
           "name": "Artichoke Hearts",
           "small": {
@@ -2753,7 +2756,8 @@
       ]
     },
     {
-      "Fruit Toppings": [
+      "category": "Fruit Toppings",
+      "options": [
         {
           "name": "Mandarin Oranges",
           "small": {
@@ -2871,7 +2875,8 @@
       ]
     },
     {
-      "Other Toppings": [
+      "category": "Other Toppings",
+      "options": [
         {
           "name": "Balsamic Glaze",
           "small": {
