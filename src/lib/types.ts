@@ -69,16 +69,16 @@ export type BYOPizzaTableProps = {
   size: string;
   setMacros: Dispatch<SetStateAction<Macros>>;
   setSelected: Dispatch<SetStateAction<string>>;
-  setCrust: React.Dispatch<React.SetStateAction<PizzaWithSizeOptions>>;
+  setIngredient: React.Dispatch<React.SetStateAction<PizzaWithSizeOptions>>;
 };
 
 export type BYOPizzaToppingsProps = {
-  key: string;
   category: string;
   items: PizzaWithSizeOptions[];
   size: string;
   setMacros: Dispatch<SetStateAction<Macros>>;
-  setSelected: Dispatch<SetStateAction<string>>;
+  setSelected: Dispatch<SetStateAction<string[]>>;
+  toppingsList: string[];
 };
 
 export type SandwichTableProps = {

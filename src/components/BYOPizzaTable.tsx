@@ -1,6 +1,6 @@
 import { BYOPizzaTableProps } from '../lib/types';
 
-function BYOPizzaTable({ category, items, size, setSelected, setMacros, setCrust }: BYOPizzaTableProps) {
+function BYOPizzaTable({ category, items, size, setSelected, setMacros, setIngredient }: BYOPizzaTableProps) {
   return (
     <div>
       <div>{category.toLocaleUpperCase()}</div>
@@ -37,7 +37,7 @@ function BYOPizzaTable({ category, items, size, setSelected, setMacros, setCrust
                       carb: item[size].total_carbohydrates || 0,
                     });
                     setSelected(`${item.name} ${category}`);
-                    setCrust(item);
+                    setIngredient(item);
                   }}
                 />
               </td>
