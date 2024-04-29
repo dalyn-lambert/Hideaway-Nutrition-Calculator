@@ -83,17 +83,18 @@ export default function BYOPizza() {
 
   // TOPPINGS
   const allToppings = data.toppings;
-  const [macrosToppings, setMacrosToppings] = React.useState({ cal: 0, protein: 0, fat: 0, carb: 0 });
+  const [macrosToppings, setMacrosToppings] = React.useState([{ cal: 0, protein: 0, fat: 0, carb: 0 }]);
   const [toppings, setToppings] = React.useState(emptyPizza);
   const [toppingsName, setToppingsName] = React.useState(['']);
-
-  console.log(toppingsName);
 
   return (
     <>
       <PageTitle title='Build Your Own Pizza' />
-      <CurrentSelection selected={[crustName, sauceName]} macros={[macrosCrust, macrosSauce]} />
-      {`Viewing info for one ${size} slice of pizza`}
+      <CurrentSelection
+        selected={[[crustName], [sauceName], toppingsName]}
+        macros={[[macrosCrust], [macrosSauce], macrosToppings]}
+        size={size}
+      />
       <PizzaSizeRadioButtons
         size={size}
         setSize={setSize}
@@ -126,6 +127,7 @@ export default function BYOPizza() {
           size={size}
           setSelected={setToppingsName}
           setMacros={setMacrosToppings}
+          macrosList={macrosToppings}
           toppingsList={toppingsName}
         />
       ))}

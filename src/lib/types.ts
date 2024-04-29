@@ -76,9 +76,10 @@ export type BYOPizzaToppingsProps = {
   category: string;
   items: PizzaWithSizeOptions[];
   size: string;
-  setMacros: Dispatch<SetStateAction<Macros>>;
+  setMacros: Dispatch<SetStateAction<Macros[]>>;
   setSelected: Dispatch<SetStateAction<string[]>>;
   toppingsList: string[];
+  macrosList: Macros[];
 };
 
 export type SandwichTableProps = {
@@ -96,8 +97,9 @@ export type MenuCheckboxProps = {
 };
 
 export type CurrentSelectionProps = {
-  selected: string[];
-  macros: Macros[];
+  selected: string[][];
+  macros: Macros[][];
+  size?: string;
 };
 
 export type PageTitleProps = {
