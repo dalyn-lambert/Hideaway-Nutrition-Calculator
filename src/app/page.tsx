@@ -84,7 +84,7 @@ export default function BYOPizza() {
   // TOPPINGS
   const allToppings = data.toppings;
   const [macrosToppings, setMacrosToppings] = React.useState([{ cal: 0, protein: 0, fat: 0, carb: 0 }]);
-  const [toppings, setToppings] = React.useState(emptyPizza);
+  const [currentToppings, setToppings] = React.useState([emptyPizza]);
   const [toppingsName, setToppingsName] = React.useState(['']);
 
   return (
@@ -100,8 +100,10 @@ export default function BYOPizza() {
         setSize={setSize}
         crust={crust}
         sauce={sauce}
+        toppings={currentToppings}
         setMacrosCrust={setMacrosCrust}
         setMacrosSauce={setMacrosSauce}
+        setMacrosToppings={setMacrosToppings}
       />
       <BYOPizzaTable
         category='Crust'
@@ -127,8 +129,10 @@ export default function BYOPizza() {
           size={size}
           setSelected={setToppingsName}
           setMacros={setMacrosToppings}
+          setIngredient={setToppings}
+          currentToppings={currentToppings}
           macrosList={macrosToppings}
-          toppingsList={toppingsName}
+          toppingsNameList={toppingsName}
         />
       ))}
     </>

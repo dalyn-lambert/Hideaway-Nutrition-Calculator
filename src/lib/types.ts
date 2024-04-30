@@ -47,14 +47,6 @@ export type MenuItem = {
 
 export type Macros = { cal: number; protein: number; fat: number; carb: number };
 
-export type PizzaSizeRadioButtonsProps = {
-  size: string;
-  setSize: Dispatch<SetStateAction<string>>;
-  setMacrosCrust: Dispatch<SetStateAction<Macros>>;
-  setMacrosSauce: Dispatch<SetStateAction<Macros>>;
-  crust: PizzaWithSizeOptions;
-  sauce: PizzaWithSizeOptions;
-};
 
 export type MenuRadioButtonGroupProps = {
   category: string;
@@ -72,15 +64,6 @@ export type BYOPizzaTableProps = {
   setIngredient: React.Dispatch<React.SetStateAction<PizzaWithSizeOptions>>;
 };
 
-export type BYOPizzaToppingsProps = {
-  category: string;
-  items: PizzaWithSizeOptions[];
-  size: string;
-  setMacros: Dispatch<SetStateAction<Macros[]>>;
-  setSelected: Dispatch<SetStateAction<string[]>>;
-  toppingsList: string[];
-  macrosList: Macros[];
-};
 
 export type SandwichTableProps = {
   category: string;
