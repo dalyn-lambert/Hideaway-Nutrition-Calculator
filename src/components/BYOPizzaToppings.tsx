@@ -1,4 +1,4 @@
-import { BYOPizzaToppingsProps } from '@/lib/types';
+import { BYOPizzaToppingsProps, Macros } from '@/lib/types';
 import { BaseSyntheticEvent } from 'react';
 
 function BYOPizzaToppings({
@@ -14,27 +14,37 @@ function BYOPizzaToppings({
   const handleClick = (e: BaseSyntheticEvent) => {
     const checked = e.target.checked;
     const value = e.target.value;
-    const itemMacros = items.find((item) => item.name === value);
+    const currentItem = items.find((item) => item.name === value);
+    const itemMacros = {
+      // @ts-ignore
+      cal: currentItem[size].calories || 0,
+      // @ts-ignore
+      protein: currentItem[size].protein || 0,
+      // @ts-ignore
+      fat: currentItem[size].total_fat || 0,
+      // @ts-ignore
+      carb: currentItem[size].total_carbohydrates || 0,
+    };
     if (!checked) {
       setSelected(toppingsList.filter((a) => a !== value));
-      setMacros(macrosList.filter((a) => a !== value));
+      removeMacros(itemMacros);
     } else if (checked) {
       setSelected([...toppingsList, value]);
-      setMacros([
-        ...macrosList,
-        {
-          // @ts-ignore
-          cal: itemMacros[size].calories || 0,
-          // @ts-ignore
-          protein: itemMacros[size].protein || 0,
-          // @ts-ignore
-          fat: itemMacros[size].total_fat || 0,
-          // @ts-ignore
-          carb: itemMacros[size].total_carbohydrates || 0,
-        },
-      ]);
+      setMacros([...macrosList, itemMacros]);
     }
   };
+  const removeMacros = (unselectedItem: Macros) => {
+    console.log(unselectedItem);
+    for (let i = 0; i < macrosList.length; i++) {
+      if (JSON.stringify(macrosList[i]) === JSON.stringify(unselectedItem)) {
+        console.log('if statement');
+        macrosList.splice(i, 1);
+        break;
+      }
+    }
+    setMacros(macrosList);
+  };
+
   return (
     <div>
       <div>{category.toLocaleUpperCase()}</div>

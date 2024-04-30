@@ -24,7 +24,7 @@ const NavTile = ({ link }: NavTileProps) => {
       )}
     >
       <div className='flex flex-col'>
-        {!link.implemented && <span className='text-sm italic'>Coming Soon</span>}
+        {!link.implemented && <span className='text-xs italic'>Coming Soon</span>}
         {link.label}
       </div>
     </Link>

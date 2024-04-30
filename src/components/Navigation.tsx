@@ -5,7 +5,7 @@ const links: LinkData[] = [
   { label: 'STARTERS', route: '', implemented: false },
   { label: 'SALADS', route: '', implemented: false },
   { label: 'SPECIALTY PIZZAS', route: '', implemented: false },
-  { label: 'BUILD YOUR OWN PIZZA', route: '/', implemented: true },
+  { label: 'BYO PIZZA', route: '/', implemented: true },
   { label: 'SANDWICHES', route: '/sandwiches', implemented: true },
   { label: 'PASTA', route: '/pasta', implemented: true },
   { label: 'DESSERTS', route: '/desserts', implemented: true },
