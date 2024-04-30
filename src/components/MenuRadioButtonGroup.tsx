@@ -7,11 +7,11 @@ function MenuRadioButtonGroup({ category, items, setSelected, setMacros }: MenuR
         <thead className='uppercase'>
           <tr>
             <th></th>
-            <th className='px-2'>Name</th>
-            <th className='px-2'>Cal</th>
-            <th className='px-2'>Protein</th>
-            <th className='px-2'>Fat</th>
-            <th className='px-2'>Carb</th>
+            <th className='px-4'>Name</th>
+            <th className='px-4'>Cal</th>
+            <th className='px-4'>Protein</th>
+            <th className='px-4'>Fat</th>
+            <th className='px-4'>Carb</th>
           </tr>
         </thead>
         <tbody>
@@ -34,11 +34,11 @@ function MenuRadioButtonGroup({ category, items, setSelected, setMacros }: MenuR
                   }}
                 />
               </td>
-              <td className='px-2'>{item.name}</td>
-              <td className='px-2 text-center'>{item.calories || '-'}</td>
-              <td className='px-2 text-center'>{item.protein || '-'}</td>
-              <td className='px-2 text-center'>{item.total_fat || '-'}</td>
-              <td className='px-2 text-center'>{item.total_carbohydrates || '-'}</td>
+              <td className='px-4'>{item.name}</td>
+              <td className='px-4 text-center'>{item.calories || '-'}</td>
+              <td className='px-4 text-center'>{item.protein || '-'}</td>
+              <td className='px-4 text-center'>{item.total_fat || '-'}</td>
+              <td className='px-4 text-center'>{item.total_carbohydrates || '-'}</td>
             </tr>
           ))}
         </tbody>

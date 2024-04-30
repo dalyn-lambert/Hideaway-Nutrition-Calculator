@@ -1,7 +1,14 @@
 'use client';
 
-import { CurrentSelectionProps } from '@/lib/types';
+import { Macros } from '@/lib/types';
 import _ from 'lodash';
+
+type CurrentSelectionProps = {
+  selected: string[][];
+  macros: Macros[][];
+  size?: string;
+  bread?: string;
+};
 
 const CurrentSelection = ({ selected, macros, size }: CurrentSelectionProps) => {
   const allSelected = selected.flat();

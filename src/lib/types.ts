@@ -79,12 +79,6 @@ export type MenuCheckboxProps = {
   setSelected: Dispatch<SetStateAction<string>>;
 };
 
-export type CurrentSelectionProps = {
-  selected: string[][];
-  macros: Macros[][];
-  size?: string;
-};
-
 export type PageTitleProps = {
   title: string;
 };

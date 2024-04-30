@@ -3,7 +3,7 @@
 import { PageTitleProps } from '@/lib/types';
 
 const PageTitle = ({ title }: PageTitleProps) => {
-  return <div className='text-lg'>{title}</div>;
+  return <div className='text-xl font-bold uppercase'>{title}</div>;
 };
 
 export default PageTitle;
