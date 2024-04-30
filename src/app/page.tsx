@@ -105,36 +105,38 @@ export default function BYOPizza() {
         setMacrosSauce={setMacrosSauce}
         setMacrosToppings={setMacrosToppings}
       />
-      <BYOPizzaTable
-        category='Crust'
-        items={crusts}
-        size={size}
-        setSelected={setCrustName}
-        setMacros={setMacrosCrust}
-        setIngredient={setCrust}
-      />
-      <BYOPizzaTable
-        category='Sauce'
-        items={sauces}
-        size={size}
-        setSelected={setSauceName}
-        setMacros={setMacrosSauce}
-        setIngredient={setSauce}
-      />
-      {allToppings.map((toppings) => (
-        <BYOPizzaToppings
-          key={toppings.category}
-          category={toppings.category}
-          items={toppings.options}
+      <div className='flex flex-col gap-6 pb-20'>
+        <BYOPizzaTable
+          category='Crust'
+          items={crusts}
           size={size}
-          setSelected={setToppingsName}
-          setMacros={setMacrosToppings}
-          setIngredient={setToppings}
-          currentToppings={currentToppings}
-          macrosList={macrosToppings}
-          toppingsNameList={toppingsName}
+          setSelected={setCrustName}
+          setMacros={setMacrosCrust}
+          setIngredient={setCrust}
         />
-      ))}
+        <BYOPizzaTable
+          category='Sauce'
+          items={sauces}
+          size={size}
+          setSelected={setSauceName}
+          setMacros={setMacrosSauce}
+          setIngredient={setSauce}
+        />
+        {allToppings.map((toppings) => (
+          <BYOPizzaToppings
+            key={toppings.category}
+            category={toppings.category}
+            items={toppings.options}
+            size={size}
+            setSelected={setToppingsName}
+            setMacros={setMacrosToppings}
+            setIngredient={setToppings}
+            currentToppings={currentToppings}
+            macrosList={macrosToppings}
+            toppingsNameList={toppingsName}
+          />
+        ))}
+      </div>
     </>
   );
 }
