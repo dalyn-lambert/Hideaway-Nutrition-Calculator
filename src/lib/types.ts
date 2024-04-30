@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 
-export type LinkData = { label: string; route: string };
+export type LinkData = { label: string; route: string; implemented: boolean };
 
 export type NavTileProps = { link: LinkData };
 

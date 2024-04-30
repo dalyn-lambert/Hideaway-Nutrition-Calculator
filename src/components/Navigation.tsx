@@ -2,15 +2,15 @@ import { LinkData } from '@/lib/types';
 import NavTile from './NavTile';
 
 const links: LinkData[] = [
-  { label: 'STARTERS', route: '/starters' },
-  { label: 'SALADS', route: '/salads' },
-  { label: 'SPECIALTY PIZZAS', route: '/specialty-pizzas' },
-  { label: 'BUILD YOUR OWN PIZZA', route: '/' },
-  { label: 'SANDWICHES', route: '/sandwiches' },
-  { label: 'PASTA', route: '/pasta' },
-  { label: 'DESSERTS', route: '/desserts' },
-  { label: 'DRINKS', route: '/drinks' },
-  { label: 'KID MENU', route: '/kid-menu' },
+  { label: 'STARTERS', route: '', implemented: false },
+  { label: 'SALADS', route: '', implemented: false },
+  { label: 'SPECIALTY PIZZAS', route: '', implemented: false },
+  { label: 'BUILD YOUR OWN PIZZA', route: '/', implemented: true },
+  { label: 'SANDWICHES', route: '/sandwiches', implemented: true },
+  { label: 'PASTA', route: '/pasta', implemented: true },
+  { label: 'DESSERTS', route: '/desserts', implemented: true },
+  { label: 'DRINKS', route: '/drinks', implemented: true },
+  { label: 'KID MENU', route: '/kid-menu', implemented: true },
 ];
 
 const Navigation = async () => {
