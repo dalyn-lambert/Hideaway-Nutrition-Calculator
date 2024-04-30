@@ -14,7 +14,7 @@ export default function Pastas() {
   return (
     <>
       <PageTitle title='Pastas' />
-      <CurrentSelection selected={[selected]} macros={[macros]} />
+      <CurrentSelection selected={[[selected]]} macros={[[macros]]} />
       <MenuRadioButtonGroup category='pasta' items={pastas} setSelected={setSelected} setMacros={setMacros} />
     </>
   );

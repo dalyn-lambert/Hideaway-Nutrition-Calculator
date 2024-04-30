@@ -18,7 +18,7 @@ export default function Sandwiches() {
   return (
     <>
       <PageTitle title='Sandwiches' />
-      <CurrentSelection selected={[selected, selectedColeSlaw]} macros={[macros, macrosColeSlaw]} />
+      <CurrentSelection selected={[[selected], [selectedColeSlaw]]} macros={[[macros], [macrosColeSlaw]]} />
       <SandwichTable category='sandwich' items={sandwiches} setSelected={setSelected} setMacros={setMacros} />
       <MenuCheckbox
         category='add-coleslaw'

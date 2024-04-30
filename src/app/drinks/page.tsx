@@ -14,7 +14,7 @@ export default function Drinks() {
   return (
     <>
       <PageTitle title='Drinks' />
-      <CurrentSelection selected={[selected]} macros={[macros]} />
+      <CurrentSelection selected={[[selected]]} macros={[[macros]]} />
       <MenuRadioButtonGroup category='drinks' items={drinks} setSelected={setSelected} setMacros={setMacros} />
     </>
   );

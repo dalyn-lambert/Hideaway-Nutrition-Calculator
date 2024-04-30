@@ -18,7 +18,7 @@ export default function KidMenu() {
   return (
     <>
       <PageTitle title='Kid Menu' />
-      <CurrentSelection selected={[selectedDrink, selectedFood]} macros={[foodMacros, drinkMacros]} />
+      <CurrentSelection selected={[[selectedDrink], [selectedFood]]} macros={[[foodMacros], [drinkMacros]]} />
       <MenuRadioButtonGroup
         category='food'
         items={kidsFood}

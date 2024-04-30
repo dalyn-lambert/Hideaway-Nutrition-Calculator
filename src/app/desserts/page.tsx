@@ -15,7 +15,7 @@ export default function Dessert() {
   return (
     <>
       <PageTitle title='Desserts' />
-      <CurrentSelection selected={[selected]} macros={[macros]} />
+      <CurrentSelection selected={[[selected]]} macros={[[macros]]} />
       <MenuRadioButtonGroup category='pasta' items={desserts} setSelected={setSelected} setMacros={setMacros} />
     </>
   );
