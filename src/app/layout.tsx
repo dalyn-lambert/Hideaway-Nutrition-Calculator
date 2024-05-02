@@ -7,7 +7,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Hideaway Nutrition Calculator',
-  description: 'Calculate the nutrition information for your Hideaway Pizza Meal',
+  description: 'Calculate the nutrition information for your Hideaway Pizza meal',
 };
 
 const overpass = Overpass({ subsets: ['latin'] });
