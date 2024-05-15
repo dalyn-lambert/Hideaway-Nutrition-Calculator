@@ -1,4 +1,5 @@
 # Hideaway Nutrition Caluclation
+Calculate the nutrition information for your meal at Hideaway Pizza.
 
 ## Visit the Site
 
