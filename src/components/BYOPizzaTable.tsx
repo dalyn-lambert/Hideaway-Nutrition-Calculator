@@ -3,16 +3,16 @@ import { BYOPizzaTableProps } from '../lib/types';
 function BYOPizzaTable({ category, items, size, setSelected, setMacros, setIngredient }: BYOPizzaTableProps) {
   return (
     <div>
-      <div className='uppercase text-lg font-bold text-center mb-2 border-b border-b-black w-full'>{category}</div>
+      <div className='uppercase text-lg font-bold text-center mb-2 border-b border-b-black'>{category}</div>
       <table className='table-auto'>
         <thead className='uppercase'>
           <tr>
             <th></th>
-            <th className='px-4'>Name</th>
+            <th className='pl-4'>Name</th>
             <th className='px-4'>Cal</th>
             <th className='px-4'>Protein</th>
             <th className='px-4'>Fat</th>
-            <th className='px-4'>Carb</th>
+            <th className='pr-4'>Carb</th>
           </tr>
         </thead>
         <tbody>
@@ -41,26 +41,26 @@ function BYOPizzaTable({ category, items, size, setSelected, setMacros, setIngre
                   }}
                 />
               </td>
-              <td className='px-4'>{item.name}</td>
-              <td className='px-4 text-center'>
+              <td className='pl-4'>{item.name}</td>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].calories || '-'
                 }
               </td>
-              <td className='px-4 text-center'>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].protein || '-'
                 }
               </td>
-              <td className='px-4 text-center'>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].total_fat || '-'
                 }
               </td>
-              <td className='px-4 text-center'>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].total_carbohydrates || '-'

@@ -111,7 +111,6 @@ function BYOPizzaToppings({
     console.log(unselectedItem);
     for (let i = 0; i < macrosList.length; i++) {
       if (JSON.stringify(macrosList[i]) === JSON.stringify(unselectedItem)) {
-        console.log('if statement');
         macrosList.splice(i, 1);
         break;
       }
@@ -126,11 +125,11 @@ function BYOPizzaToppings({
         <thead className='uppercase'>
           <tr>
             <th></th>
-            <th className='px-4'>Name</th>
+            <th className='pl-4'>Name</th>
             <th className='px-4'>Cal</th>
             <th className='px-4'>Protein</th>
             <th className='px-4'>Fat</th>
-            <th className='px-4'>Carb</th>
+            <th className='pr-4'>Carb</th>
           </tr>
         </thead>
         <tbody>
@@ -139,26 +138,26 @@ function BYOPizzaToppings({
               <td>
                 <input type='checkbox' id={item.name} name={category} value={item.name} onClick={handleClick} />
               </td>
-              <td className='px-4'>{item.name}</td>
-              <td className='px-4 text-center'>
+              <td className='pl-4'>{item.name}</td>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].calories || '-'
                 }
               </td>
-              <td className='px-4 text-center'>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].protein || '-'
                 }
               </td>
-              <td className='px-4 text-center'>
+              <td className='text-center'>
                 {
                   // @ts-ignore
                   item[size].total_fat || '-'
                 }
               </td>
-              <td className='px-4 text-center'>
+              <td className='pr-4 text-center'>
                 {
                   // @ts-ignore
                   item[size].total_carbohydrates || '-'

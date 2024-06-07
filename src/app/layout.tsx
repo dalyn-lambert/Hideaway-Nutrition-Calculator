@@ -15,7 +15,7 @@ const overpass = Overpass({ subsets: ['latin'] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className={overpass.className}>
-      <body className='flex min-h-screen flex-col gap-6 items-center p-4 pt-10'>
+      <body className='flex min-h-screen flex-col gap-6 items-center p-4 py-10'>
         <Link href={'/'} className='font-bold text-2xl'>
           HIDEAWAY PIZZA NUTRITION CALCULATOR
         </Link>

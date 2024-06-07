@@ -105,7 +105,7 @@ export default function BYOPizza() {
         setMacrosSauce={setMacrosSauce}
         setMacrosToppings={setMacrosToppings}
       />
-      <div className='flex flex-col gap-6 pb-20'>
+      <div className='flex flex-col gap-6'>
         <BYOPizzaTable
           category='Crust'
           items={crusts}
